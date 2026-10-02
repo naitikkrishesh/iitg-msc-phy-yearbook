@@ -20,7 +20,7 @@ app.add_middleware(
 
         # Previous deployments, if you still need them
         "https://yearbook-qhxo54zdm-krishesh.vercel.app",
-        "https://yearbook-mauve-mu.vercel.app",
+        "https://yearbookphy.vercel.app/",
     ],
     allow_credentials=True,
     allow_methods=["*"],
