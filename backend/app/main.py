@@ -15,11 +15,6 @@ app.add_middleware(
         "http://localhost:5173",
         "http://localhost:3000",
 
-        # Vercel frontend
-        "https://yearbook-6ijislt6-krishesh.vercel.app",
-
-        # Previous deployments, if you still need them
-        "https://yearbook-qhxo54zdm-krishesh.vercel.app",
         "https://yearbookphy.vercel.app/",
     ],
     allow_credentials=True,
