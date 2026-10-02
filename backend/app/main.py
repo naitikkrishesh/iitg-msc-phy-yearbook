@@ -12,11 +12,15 @@ app = FastAPI(title="Physics Yearbook IITG API", version="1.0.0")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        settings.CORS_ORIGINS,
         "http://localhost:5173",
         "http://localhost:3000",
+
+        # Vercel frontend
+        "https://yearbook-6ijislt6-krishesh.vercel.app",
+
+        # Previous deployments, if you still need them
+        "https://yearbook-qhxo54zdm-krishesh.vercel.app",
         "https://yearbook-mauve-mu.vercel.app",
-        "https://yearbook-qhx054zdm-krishesh.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
