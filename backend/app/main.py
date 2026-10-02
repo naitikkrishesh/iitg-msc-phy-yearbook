@@ -15,6 +15,7 @@ app.add_middleware(
         settings.CORS_ORIGINS,
         "http://localhost:5173",
         "http://localhost:3000",
+        "https://yearbook-mauve-mu.vercel.app",
         "https://yearbook-qhx054zdm-krishesh.vercel.app",
     ],
     allow_credentials=True,
