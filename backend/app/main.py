@@ -11,7 +11,12 @@ app = FastAPI(title="Physics Yearbook IITG API", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.CORS_ORIGINS,
+    allow_origins=[
+        settings.CORS_ORIGINS,
+        "http://localhost:5173",
+        "http://localhost:3000",
+        "https://yearbook-qhx054zdm-krishesh.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -29,3 +34,7 @@ app.include_router(admin.router)
 @app.get("/api/health")
 def health():
     return {"status": "ok"}
+
+@app.get("/")
+def root():
+    return {"message": "IITG MSc Physics Yearbook API is running"}
